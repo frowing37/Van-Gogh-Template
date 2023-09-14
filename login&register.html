@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş ve Kayıt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-register">
+        <div class="login">
+            <h2>Giriş Yap</h2>
+            <form id="login-form">
+                <div class="input-container">
+                    <input type="text" id="login-username" placeholder="Kullanıcı Adı" required>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="login-password" placeholder="Şifre" required>
+                </div>
+                <button type="submit" id="login-button">Giriş Yap</button>
+            </form>
+        </div>
+        <div class="register">
+            <h2>Kaydol</h2>
+            <form id="register-form">
+                <div class="input-container">
+                    <input type="text" id="register-username" placeholder="Yeni Kullanıcı Adı" required>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="register-password" placeholder="Yeni Şifre" required>
+                </div>
+                <button type="submit" id="register-button">Kaydol</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('~/yıldızlı-gece-van-gogh.jpg'); /* Gece manzarası arka plan resmi */
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .login-register {
+        display: flex;
+        justify-content: space-around;
+        width: 600px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .login, .register {
+        text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #4400FF;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #2200AA;
+        }
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const loginButton = document.getElementById('login-button');
+        const registerButton = document.getElementById('register-button');
+
+        loginButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            // Giriş işlemleri burada yapılabilir.
+        });
+
+        registerButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            // Kayıt işlemleri burada yapılabilir.
+        });
+    });
+
+</script>
